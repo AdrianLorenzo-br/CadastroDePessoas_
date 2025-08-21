@@ -1,0 +1,6 @@
+2025-08-21 15:32:53.237402-03:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLDataException: Data conversion error converting "'' (TB_CADASTRO: ""MISSOES_ID"" BIGINT)"; SQL statement:
+UPDATE "PUBLIC"."TB_CADASTRO" SET "ID"=? ,"EMAIL"=? ,"IDADE"=? ,"IMG_URL"=? ,"NOME"=? ,"MISSOES_ID"=? ,"RANK"=? ,"TAREFAS_ID"=?  WHERE "ID"=? [22018-232]
+2025-08-21 15:32:53.240400-03:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLDataException: Data conversion error converting "'' (TB_CADASTRO: ""MISSOES_ID"" BIGINT)"; SQL statement:
+UPDATE "PUBLIC"."TB_CADASTRO" SET "ID"=? ,"EMAIL"=? ,"IDADE"=? ,"IMG_URL"=? ,"NOME"=? ,"MISSOES_ID"=? ,"RANK"=? ,"TAREFAS_ID"=?  WHERE "ID"=? [22018-232]

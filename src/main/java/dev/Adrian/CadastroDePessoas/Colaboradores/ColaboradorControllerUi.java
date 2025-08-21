@@ -43,7 +43,7 @@ public class ColaboradorControllerUi {
     }
 
     @GetMapping("/adicionar")
-    public String mostrarFormularioAdicionarColaborador(Model model) {
+    public String FormularioAdicionar(Model model) {
         model.addAttribute("colaborador", new ColaboradorDTO());
         return "adicionarColaborador";
     }
@@ -56,7 +56,7 @@ public class ColaboradorControllerUi {
     }
 
     @GetMapping("/alterar/{id}")
-    public String mostrarFormularioAlterarColaborador(@PathVariable Long id, Model model) {
+    public String FormularioAlterar(@PathVariable Long id, Model model) {
         ColaboradorDTO colaborador = colaboradorService.listarColaboradoresPorID(id);
         if (colaborador != null) {
             model.addAttribute("colaborador", colaborador);
@@ -68,7 +68,7 @@ public class ColaboradorControllerUi {
     }
 
     @PostMapping("/alterar")
-    public String salvarAlteracaoColaborador(@ModelAttribute ColaboradorDTO colaborador, RedirectAttributes redirectAttributes) {
+    public String salvarAlteracao(@ModelAttribute ColaboradorDTO colaborador, RedirectAttributes redirectAttributes) {
         colaboradorService.atualizarColaborador(colaborador.getId(), colaborador);
         redirectAttributes.addFlashAttribute("mensagem", "Colaborador atualizado com sucesso!");
         return "redirect:/colaboradores/ui/listar";
