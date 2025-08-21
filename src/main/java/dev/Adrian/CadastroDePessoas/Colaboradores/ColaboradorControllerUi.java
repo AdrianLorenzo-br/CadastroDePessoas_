@@ -73,4 +73,4 @@ public class ColaboradorControllerUi {
         redirectAttributes.addFlashAttribute("mensagem", "Colaborador atualizado com sucesso!");
         return "redirect:/colaboradores/ui/listar";
     }
-}}
+}
