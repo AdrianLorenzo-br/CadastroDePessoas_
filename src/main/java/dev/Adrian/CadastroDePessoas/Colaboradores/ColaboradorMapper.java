@@ -1,5 +1,4 @@
 package dev.Adrian.CadastroDePessoas.Colaboradores;
-package dev.Adrian.CadastroDeNinjas.Colaboradores;
 
 import org.springframework.stereotype.Component;
 

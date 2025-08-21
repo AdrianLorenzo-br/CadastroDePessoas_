@@ -3,36 +3,35 @@ package dev.Adrian.CadastroDePessoas.Tarefas;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("dev/Adrian/CadastroDePessoas/Tarefas")
+@RequestMapping("tarefas")
 public class TarefasController {
 
-    // Adicionar (CREATE)
     @PostMapping("/criar")
-    public String criarMissao (){
-        return "missão criada";
+    public String criarTarefa (){
+        return "Tarefa criada";
     }
 
-    // Mostrar todos (READ)
+
     @GetMapping("/listar")
-    public String listarTodosAsMissoes (){
-        return "Mostrar Missão";
+    public String listarTodasAsTarefas (){
+        return "Mostrar Tarefa";
     }
 
-    // Procurar por id (READ)
+
     @GetMapping("/listarID")
-    public String listarMissãoPorID () {
-        return "Mostrar Missão por id";
+    public String listarTarefaPorID () {
+        return "Mostrar Tarefa por id";
     }
 
-    // Alterar dados(UPDATE)
+
     @PutMapping("/alterarID")
-    public String alterarMissaoPorId (){
-        return "Alterar Missão por id";
+    public String alterarTarefaPorId (){
+        return "Alterar Tarefa por id";
     }
 
-    // Deletar (DELETE)
+    
     @DeleteMapping("/deletarID")
-    public String deletarMissaoPorId(){
-        return "Missão deletada por id";
+    public String deletarTarefaPorId(){
+        return "Tarefa deletada por id";
     }
 }

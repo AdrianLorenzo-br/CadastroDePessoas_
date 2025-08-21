@@ -1,7 +1,7 @@
 package dev.Adrian.CadastroDePessoas.Tarefas;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import dev.Adrian.CadastroDeNinjas.Ninjas.NinjaModel;
+import dev.Adrian.CadastroDePessoas.Colaboradores.ColaboradorModel;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -11,7 +11,7 @@ import lombok.ToString;
 import java.util.List;
 
 @Entity
-@Table(name = "tb_missoes")
+@Table(name = "tb_tarefas")
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
@@ -26,9 +26,7 @@ public class TarefasModel {
 
     private String dificuldade;
 
-    // @OneToMany - uma missão pode ter varios ninjas
-    @OneToMany(mappedBy = "dev/Adrian/CadastroDePessoas/Tarefas")
+    @OneToMany(mappedBy = "tarefas")
     @JsonIgnore
-    private List<NinjaModel> ninjas;
-
+    private List<ColaboradorModel> colaboradores;
 }

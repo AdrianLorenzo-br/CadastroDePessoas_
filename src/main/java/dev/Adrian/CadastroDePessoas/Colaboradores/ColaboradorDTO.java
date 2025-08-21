@@ -1,6 +1,6 @@
 package dev.Adrian.CadastroDePessoas.Colaboradores;
 
-import dev.Adrian.CadastroDePessoas.tarefas.TarefasModel;
+import dev.Adrian.CadastroDePessoas.Tarefas.TarefasModel;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -18,4 +18,4 @@ public class ColaboradorDTO {
     private String rank;
     private TarefasModel tarefas;
 
-}}
+}
