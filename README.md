@@ -35,17 +35,28 @@ A estrutura do projeto segue as convenções de um projeto Spring Boot.
 
 src/main/
 ├── java/
+
 │   └── dev/Adrian/CadastroDePessoas/
+
 │       ├── CadastrodePessoasApplication.java  (Classe principal)
+
 │       ├── Colaboradores/  (Classes de modelo, controller, service e repositório para Colaboradores)
+
 │       └── Tarefas/        (Classes de modelo, controller e repositório para Tarefas)
+
 ├── resources/
 │   ├── application.properties    (Configurações do Spring Boot)
+
 │   ├── migrations/               (Scripts de migração do Flyway)
+
 │   └── templates/                (Templates HTML do Thymeleaf)
+
 └── test/
+
 └── ...
-🚀 Como Rodar o Projeto
+
+## 🚀 Como Rodar o Projeto
+
 Pré-requisitos
 Java Development Kit (JDK) 24
 
