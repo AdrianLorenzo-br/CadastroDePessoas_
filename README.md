@@ -1,10 +1,10 @@
-🚀 Sistema de Gerenciamento de Colaboradores e Tarefas
+#  🚀 Sistema de Gerenciamento de Colaboradores e Tarefas
 
-📝 Descrição do Projeto
+## 📝 Descrição do Projeto
 
 Este projeto é uma aplicação completa (Full-stack) para gerenciamento de colaboradores e suas tarefas. O sistema oferece uma API RESTful para manipulação de dados e uma interface web para visualização e interação, servindo como um projeto prático para aplicar conceitos de desenvolvimento backend com Spring Boot.
 
-✨ Funcionalidades
+## ✨ Funcionalidades
 A aplicação permite as seguintes operações:
 
 Gerenciamento de Colaboradores (CRUD): Criar, visualizar, alterar e deletar informações de colaboradores.
@@ -15,7 +15,7 @@ Visualização Detalhada: Páginas dedicadas para exibir os detalhes de cada col
 
 Controle de Dados: Manipulação de dados de colaboradores como nome, email, idade, cargo e URL de imagem.
 
-🛠️ Tecnologias Utilizadas
+## 🛠️ Tecnologias Utilizadas
 Backend: Java 24 e Spring Boot.
 
 Web Framework: Spring MVC com Thymeleaf para renderização de views.
@@ -30,7 +30,7 @@ Ferramenta de Build: Maven.
 
 Utilitários: Lombok (para geração de código boilerplate).
 
-📂 Estrutura do Projeto
+## 📂 Estrutura do Projeto
 A estrutura do projeto segue as convenções de um projeto Spring Boot.
 
 src/main/
@@ -69,7 +69,7 @@ Bash
 ./mvnw spring-boot:run
 A aplicação será iniciada no http://localhost:8080.
 
-🌐 Endpoints da Aplicação
+## 🌐 Endpoints da Aplicação
 Interface Web:
 
 http://localhost:8080/colaboradores/ui/listar - Lista todos os colaboradores.
@@ -88,7 +88,7 @@ PUT /colaboradores/alterar/{id} - Atualiza um colaborador existente.
 
 DELETE /colaboradores/deletar/{id} - Deleta um colaborador por ID.
 
-🤝 Autor
+## 🤝 Autor
 Adrian Lorenzo
 
 Se tiver alguma dúvida, sugestão ou feedback, sinta-se à vontade para abrir uma issue ou entrar em contato.
