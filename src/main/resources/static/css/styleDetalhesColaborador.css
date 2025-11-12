@@ -1,0 +1,109 @@
+/* Estilos gerais */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Estilos para o contêiner de detalhes */
+.detalhes-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Estilos para a imagem do colaborador */
+img {
+    border-radius: 50%;
+    border: 4px solid #3498db;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 2em;
+    margin: 10px 0;
+    color: #2c3e50;
+}
+
+p {
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+strong {
+    color: #34495e;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-color: #ddd;
+    margin: 20px 0;
+}
+
+/* Estilos da tabela de tarefas */
+h3 {
+    color: #2c3e50;
+    margin-top: 30px;
+    text-align: left;
+}
+
+.tarefas-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.tarefas-table thead {
+    background-color: #34495e;
+    color: white;
+}
+
+.tarefas-table th, .tarefas-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.tarefas-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.tarefas-table tbody tr:hover {
+    background-color: #ecf0f1;
+    transform: scale(1.005);
+    transition: all 0.3s ease;
+}
+
+/* Estilos para o botão de voltar */
+.btn-voltar {
+    display: inline-block;
+    padding: 12px 24px;
+    margin-top: 30px;
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-voltar:hover {
+    background-color: #2980b9;
+}
