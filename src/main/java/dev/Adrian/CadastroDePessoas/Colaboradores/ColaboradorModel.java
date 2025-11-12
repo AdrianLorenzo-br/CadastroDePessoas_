@@ -3,10 +3,7 @@ package dev.Adrian.CadastroDePessoas.Colaboradores;
 
 import dev.Adrian.CadastroDePessoas.Tarefas.TarefasModel;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import lombok.*;
 
 // O entity Transforma Uma Classe em Entidade do banco de dados
 // JPA = Java Persistence API
@@ -16,6 +13,7 @@ import lombok.ToString;
 @AllArgsConstructor
 @Data // cria Getters e Setter
 @ToString(exclude = "tarefas")
+@Builder
 public class ColaboradorModel {
 
     @Id

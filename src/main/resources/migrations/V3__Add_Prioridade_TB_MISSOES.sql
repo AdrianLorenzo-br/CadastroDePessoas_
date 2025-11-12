@@ -1,0 +1,4 @@
+
+ALTER TABLE COLABORADORES
+ALTER COLUMN dificuldade
+RENAME TO prioriade;

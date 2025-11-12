@@ -1,18 +1,18 @@
 package dev.Adrian.CadastroDePessoas.Tarefas;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import dev.Adrian.CadastroDePessoas.Colaboradores.ColaboradorModel;
-import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.util.List;
 
+@Builder
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class TarefaDTO {
+public class TarefasDTO {
 
     private Long id;
     private String nome;

@@ -3,10 +3,7 @@ package dev.Adrian.CadastroDePessoas.Tarefas;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import dev.Adrian.CadastroDePessoas.Colaboradores.ColaboradorModel;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import lombok.*;
 
 import java.util.List;
 
@@ -16,6 +13,7 @@ import java.util.List;
 @AllArgsConstructor
 @Data
 @ToString
+@Builder
 public class TarefasModel {
 
     @Id
@@ -24,7 +22,7 @@ public class TarefasModel {
 
     private String nome;
 
-    private String dificuldade;
+    private String prioriade;
 
     @OneToMany(mappedBy = "tarefas")
     @JsonIgnore
