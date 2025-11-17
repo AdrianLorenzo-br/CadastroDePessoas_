@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Tabela de Colaboradores</title>
+    <link rel="stylesheet" th:href="@{/css/styleIndex.css}">
+</head>
+<body>
+
+<h1>Lista de Tarefas</h1>
+<a class="btn-adicionar-trfa" th:href="@{/tarefas/ui/adicionar}">Adicionar Nova Tarefa</a>
+<a class="btn-visualizar-clbr" th:href="@{/colaboradores/ui/listar}">colaboradores</a>
+
+
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Tarefa</th>
+        <th>Prioridade</th>
+        <th>Ações</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="tarefa: ${tarefas}">
+        <td th:text="${tarefa.id}"></td>
+        <td th:text="${tarefa.nome}"></td>
+        <td th:text="${tarefa.prioridade}"></td>
+
+        <td class="btn-container">
+            <a class="btn-detalhes" th:href="@{/tarefas/ui/listar/{id}(id=${tarefa.id})}">Ver Detalhes</a>
+            <a class="btn-alterar" th:href="@{/tarefas/ui/alterar/{id}(id=${tarefa.id})}">Alterar</a>
+            <a class="btn-deletar" th:href="@{/tarefas/ui/deletar/{id}(id=${tarefa.id})}">Deletar</a>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>

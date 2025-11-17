@@ -86,7 +86,7 @@ img {
     opacity: 0.8;
 }
 
-.btn-adicionar-clbr, .btn-adicionar-trfa {
+.btn-adicionar-clbr, .btn-visualizar-trfa, .btn-adicionar-trfa, .btn-visualizar-clbr {
     display: inline-block;
     padding: 10px 20px;
     margin-bottom: 20px;
@@ -98,14 +98,15 @@ img {
     transition: background-color 0.3s ease;
 }
 
-.btn-adicionar-trfa {
+.btn-visualizar-trfa, .btn-adicionar-trfa {
     background-color: #f8713e;
 }
 
-.btn-adicionar-trfa:hover {
+.btn-visualizar-trfa:hover, .btn-adicionar-trfa:hover {
     background-color: #c55226
 }
 
-.btn-adicionar-clbr:hover {
+
+.btn-adicionar-clbr:hover, .btn-visualizar-clbr:hover {
     background-color: #229954;
 }

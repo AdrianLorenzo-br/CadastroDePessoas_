@@ -16,7 +16,7 @@ public class TarefasDTO {
 
     private Long id;
     private String nome;
-    private String prioriade;
+    private String prioridade;
     private List<ColaboradorModel> colaboradores;
 
 }

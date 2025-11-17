@@ -1,6 +1,5 @@
 package dev.Adrian.CadastroDePessoas.Tarefas;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -11,11 +10,10 @@ import java.util.stream.Collectors;
 public class TarefasService {
 
     private final TarefasRepository tarefaRepository;
-    private final TarefasMapper tarefasMapper;
 
-    TarefasService(TarefasRepository tarefasRepository, TarefasMapper tarefasMapper) {
+
+    TarefasService(TarefasRepository tarefasRepository) {
         this.tarefaRepository = tarefasRepository;
-        this.tarefasMapper = tarefasMapper;
     }
 
     public TarefasDTO criarTarefa(TarefasDTO request) {
@@ -36,7 +34,7 @@ public class TarefasService {
         return tarefaPorId.map(TarefasMapper::toTarefasDTO).orElse(null);
     }
 
-    public void DeletarTarefasPorId(Long id) {
+    public void deletarTarefasPorId(Long id) {
         tarefaRepository.deleteById(id);
     }
 

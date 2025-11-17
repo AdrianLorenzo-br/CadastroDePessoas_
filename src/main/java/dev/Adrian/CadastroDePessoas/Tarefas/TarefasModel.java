@@ -22,7 +22,7 @@ public class TarefasModel {
 
     private String nome;
 
-    private String prioriade;
+    private String prioridade;
 
     @OneToMany(mappedBy = "tarefas")
     @JsonIgnore

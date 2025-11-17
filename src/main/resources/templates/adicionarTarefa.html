@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Adicionar Tarefa</title>
+    <link rel="stylesheet" th:href="@{/css/styleAdicionaColaborador.css}">
+</head>
+<body>
+<h1>Adicionar Nova Tarefa</h1>
+<div class="form-container">
+    <div th:if="${mensagem}" class="mensagem" th:text="${mensagem}"></div>
+    <form th:action="@{/tarefas/ui/salvar}" th:object="${tarefa}" method="post">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" th:field="*{nome}" required/>
+
+        <label for="imgUrl">Prioriade:</label>
+        <input type="text" id="imgUrl" th:field="*{prioridade}" required/>
+
+        <button class="btn-salvar" type="submit">Cadastrar Tarefa</button>
+    </form>
+    <a class="btn-voltar" th:href="@{/tarefas/ui/listar}">Voltar para a lista de tarefas</a>
+</div>
+</body>
+</html>

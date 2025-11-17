@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Detalhes da Tarefa</title>
+    <link rel="stylesheet" th:href="@{/css/styleDetalhesColaborador.css}">
+</head>
+<body>
+<h1>Detalhes da Tarefa</h1>
+<div class="detalhes-container">
+    <h2 th:text="${tarefa.nome}"></h2>
+    <hr>
+    <p><strong>Prioridade:</strong> <span th:text="${tarefa.prioridade}"></span></p>
+    <hr>
+    <a class="btn-voltar" th:href="@{/tarefas/ui/listar}">Voltar para a lista de Tarefas</a>
+</div>
+</body>
+</html>

@@ -19,9 +19,9 @@ public class ColaboradorControllerUi {
 
     @GetMapping("/listar")
     public String listarColaboradores(Model model) {
-        List<ColaboradorDTO> colaboradores =  colaboradorService.listarColaboradores();
+        List<ColaboradorDTO> colaboradores = colaboradorService.listarColaboradores();
         model.addAttribute("colaboradores", colaboradores);
-        return "listarColaboradores";
+        return "Index";
     }
 
     @GetMapping("/deletar/{id}")
@@ -32,13 +32,13 @@ public class ColaboradorControllerUi {
 
     @GetMapping("/listar/{id}")
     public String listarColaboradoresPorId(@PathVariable Long id, Model model) {
-        ColaboradorDTO colaborador =  colaboradorService.listarColaboradoresPorID(id);
+        ColaboradorDTO colaborador = colaboradorService.listarColaboradoresPorID(id);
         if (colaborador != null) {
             model.addAttribute("colaborador", colaborador);
             return "detalhesColaborador";
         } else {
             model.addAttribute("mensagem", "Colaborador não encontrado");
-            return "listarColaboradores";
+            return "Index";
         }
     }
 

@@ -1,12 +1,10 @@
 package dev.Adrian.CadastroDePessoas.Tarefas;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 @RequestMapping("tarefas")
@@ -31,7 +29,7 @@ public class TarefasController {
         return ResponseEntity.ok(tarefas);
     }
 
-    @GetMapping("/listar/${id}")
+    @GetMapping("/listar/{id}")
     public ResponseEntity<?> listarTarefaPorID(@PathVariable Long id, @RequestBody TarefasDTO TarefasRequest) {
         TarefasDTO tarefaExistente = tarefasService.listarTarefasPorId(id);
         if (tarefaExistente != null) {
@@ -43,7 +41,7 @@ public class TarefasController {
     }
 
 
-    @PutMapping("/alterar/${id}")
+    @PutMapping("/alterar/{id}")
     public ResponseEntity<?> alterarTarefaPorId(@PathVariable Long id, @RequestBody TarefasDTO TarefasRequest) {
         TarefasDTO tarefaExistente = tarefasService.listarTarefasPorId(id);
         if (tarefaExistente != null) {
@@ -55,11 +53,11 @@ public class TarefasController {
     }
 
 
-    @DeleteMapping("/deletarID")
-    public ResponseEntity<String> deletarTarefaPorId(Long id) {
+    @DeleteMapping("/deletar/{id}")
+    public ResponseEntity<String> deletarTarefaPorId(@PathVariable Long id) {
         TarefasDTO tarefaExistente = tarefasService.listarTarefasPorId(id);
         if (tarefaExistente != null) {
-            tarefasService.DeletarTarefasPorId(id);
+            tarefasService.deletarTarefasPorId(id);
             return ResponseEntity.ok("Tarefa Deletado com Sucesso");
         }
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Tarefa de ID: " + id + " não existe");

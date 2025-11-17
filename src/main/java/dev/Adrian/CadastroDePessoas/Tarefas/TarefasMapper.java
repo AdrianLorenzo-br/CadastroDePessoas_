@@ -1,6 +1,8 @@
 package dev.Adrian.CadastroDePessoas.Tarefas;
 
 import lombok.experimental.UtilityClass;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Controller;
 
 @UtilityClass
 public class TarefasMapper {
@@ -9,7 +11,7 @@ public class TarefasMapper {
         return TarefasModel.builder()
                 .id(tarefasDTO.getId())
                 .nome(tarefasDTO.getNome())
-                .prioriade(tarefasDTO.getPrioriade())
+                .prioridade(tarefasDTO.getPrioridade())
                 .build();
 
 
@@ -19,9 +21,8 @@ public class TarefasMapper {
         return TarefasDTO.builder()
                 .id(tarefasModel.getId())
                 .nome(tarefasModel.getNome())
-                .prioriade(tarefasModel.getPrioriade())
+                .prioridade(tarefasModel.getPrioridade())
                 .build();
-
-
+        
     }
 }
